@@ -21,7 +21,7 @@
     height: 100vh;
   }
   .card {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     border: 2px solid #00aaff;
     border-radius: 15px;
     padding: 30px;
@@ -29,7 +29,7 @@
     width: 320px;
     box-shadow: 0 0 20px #00aaff;
   }
-  h2 { margin-bottom: 5px; }
+  h2 { margin-bottom: 5px; color: #fff; }
   p { margin: 5px 0; font-size: 14px; color: #bbb; }
   .jb-btn {
     width: 120px;
@@ -50,6 +50,15 @@
   .jb-btn:hover { background: #00aaff; color: #000; }
   #status { margin-top: 15px; font-weight: bold; color: #00ffcc; }
 </style>
+<script>
+  function load_payload() {
+    document.getElementById("status").innerHTML = "Triggering Exploit...";
+    // ئاراستەکردن بۆ بڕگەی جێبەجێکردنی پەیڵۆدی goldhen.bin
+    setTimeout(function() {
+      location.href = "goldhen.bin";
+    }, 1000);
+  }
+</script>
 </head>
 <body>
 
@@ -59,36 +68,11 @@
   <p>☎ 0750 777 9532</p>
   <p>by Delgash Gaming</p>
 
-  <div class="jb-btn" onclick="runJailbreak()">JAILBREAK</div>
+  <div class="jb-btn" onclick="load_payload()">JAILBREAK</div>
 
   <div id="status">READY</div>
 </div>
 
-<script>
-function runJailbreak() {
-  document.getElementById('status').innerHTML = "Loading GoldHEN...";
-  
-  // لۆدکردنی فایلی goldhen.bin
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'goldhen.bin', true);
-  xhr.responseType = 'arraybuffer';
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      document.getElementById('status').innerHTML = "GoldHEN Loaded Successfully!";
-      // داواکاری بۆ دەستپێکردنی پەیڵۆد
-      setTimeout(function(){
-        alert("GoldHEN v2.4 Loaded!");
-      }, 1000);
-    } else {
-      document.getElementById('status').innerHTML = "Error: goldhen.bin not found!";
-    }
-  };
-  xhr.onerror = function() {
-    document.getElementById('status').innerHTML = "Error loading payload!";
-  };
-  xhr.send();
-}
-</script>
-
 </body>
 </html>
+
