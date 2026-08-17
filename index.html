@@ -3,57 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSSFontFace UAF Exploit</title>
+<title>Delgash Gaming PS4 Host</title>
 <style>
   body {
-    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1920');
+    background-image: url('https://delgashgaming.github.io/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #ffffff;
     font-family: Arial, sans-serif;
-    padding: 30px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
-  .container {
+  .card {
     background: rgba(0, 0, 0, 0.75);
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 500px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border: 2px solid #00aaff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 0 20px #00aaff;
   }
-  button {
-    padding: 10px 20px;
-    background-color: #0070d1;
-    color: white;
-    border: none;
-    border-radius: 6px;
+  h2 { margin-bottom: 5px; }
+  p { margin: 5px 0; font-size: 14px; color: #bbb; }
+  .jb-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    background: #111;
+    color: #fff;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px #00aaff;
   }
-  button:hover {
-    background-color: #005bb5;
-  }
+  .jb-btn:hover { background: #00aaff; color: #000; }
+  #status { margin-top: 15px; font-weight: bold; color: #00ffcc; }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>CSSFontFace UAF Exploit</h1>
-  <h3>Running on:</h3>
-  <hr>
-  <label><input type="radio" name="mode" value="NetCtrl"> NetCtrl</label>
-  <label><input type="radio" name="mode" value="Lapse"> Lapse</label>
-  <br><br>
-  <button id="jbBtn">Jailbrek</button>
-  <br><br>
-  <label><input type="checkbox" id="autojb"> Auto Jailbreak</label>
-  <br><br>
-  <p id="status">Ready. Awaiting execution...</p>
+<div class="card">
+  <h2>Delgash-Gaming</h2>
+  <p>☎ 0750 427 0137</p>
+  <p>☎ 0750 777 9532</p>
+  <p>by Delgash Gaming</p>
+
+  <div class="jb-btn" onclick="runJailbreak()">JAILBREAK</div>
+
+  <div id="status">READY</div>
 </div>
+
+<script>
+function runJailbreak() {
+  document.getElementById('status').innerHTML = "Loading GoldHEN...";
+  
+  // لۆدکردنی فایلی goldhen.bin
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'goldhen.bin', true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      document.getElementById('status').innerHTML = "GoldHEN Loaded Successfully!";
+      // داواکاری بۆ دەستپێکردنی پەیڵۆد
+      setTimeout(function(){
+        alert("GoldHEN v2.4 Loaded!");
+      }, 1000);
+    } else {
+      document.getElementById('status').innerHTML = "Error: goldhen.bin not found!";
+    }
+  };
+  xhr.onerror = function() {
+    document.getElementById('status').innerHTML = "Error loading payload!";
+  };
+  xhr.send();
+}
+</script>
 
 </body>
 </html>
+
 
 
