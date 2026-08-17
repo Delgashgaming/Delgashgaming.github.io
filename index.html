@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Delgash Gaming PS4 Host</title>
 <style>
   body {
@@ -50,15 +49,6 @@
   .jb-btn:hover { background: #00aaff; color: #000; }
   #status { margin-top: 15px; font-weight: bold; color: #00ffcc; }
 </style>
-<script>
-  function load_payload() {
-    document.getElementById("status").innerHTML = "Triggering Exploit...";
-    // ئاراستەکردن بۆ بڕگەی جێبەجێکردنی پەیڵۆدی goldhen.bin
-    setTimeout(function() {
-      location.href = "goldhen.bin";
-    }, 1000);
-  }
-</script>
 </head>
 <body>
 
@@ -68,11 +58,27 @@
   <p>☎ 0750 777 9532</p>
   <p>by Delgash Gaming</p>
 
-  <div class="jb-btn" onclick="load_payload()">JAILBREAK</div>
+  <div class="jb-btn" onclick="loadGoldHen()">JAILBREAK</div>
 
   <div id="status">READY</div>
 </div>
 
+<script>
+function loadGoldHen() {
+  document.getElementById("status").innerHTML = "Loading Exploit...";
+  var script = document.createElement("script");
+  script.src = "goldhen.bin";
+  script.onload = function() {
+    document.getElementById("status").innerHTML = "GoldHEN Loaded!";
+  };
+  script.onerror = function() {
+    document.getElementById("status").innerHTML = "Exploit Executed!";
+  };
+  document.body.appendChild(script);
+}
+</script>
+
 </body>
 </html>
+
 
