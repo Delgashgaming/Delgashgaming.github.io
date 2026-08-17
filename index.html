@@ -6,7 +6,6 @@
     <title>Delgash Gaming PS4 Host</title>
     <style>
         body {
-            /* وێنەیێ تە دێ بێتە باکگراوەند و تەواویا شاشەی گریت */
             background-image: linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.75)), url('IMG_1426.png');
             background-size: cover;
             background-position: center;
@@ -16,7 +15,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 40px 20px;
+            padding: 30px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,17 +31,33 @@
             text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
-        .subtitle {
+        .phone-numbers {
             color: #38bdf8;
-            font-size: 15px;
-            margin-bottom: 40px;
+            font-size: 16px;
+            margin-bottom: 5px;
             font-weight: bold;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .phone-numbers a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .subtitle {
+            color: #ffffff;
+            font-size: 14px;
+            margin-bottom: 30px;
+            opacity: 0.9;
             text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
         .circle-btn {
-            width: 210px;
-            height: 210px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 4px solid #38bdf8;
             background-color: rgba(13, 17, 23, 0.6);
@@ -51,7 +66,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 20px auto;
+            margin: 15px auto;
             cursor: pointer;
             backdrop-filter: blur(4px);
             transition: transform 0.2s, box-shadow 0.2s;
@@ -82,13 +97,13 @@
             color: #38bdf8;
             font-size: 20px;
             font-weight: bold;
-            margin-top: 30px;
+            margin-top: 20px;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
         .checkbox-container {
-            margin-top: 20px;
+            margin-top: 15px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -108,7 +123,11 @@
 </head>
 <body>
 
-    <h1>Delgash Gaming<br>PS4 Host</h1>
+    <h1>Delgash Gaming</h1>
+    <div class="phone-numbers">
+        <a href="tel:07504270137">📞 0750 427 0137</a>
+        <a href="tel:07507779532">📞 0750 777 9532</a>
+    </div>
     <div class="subtitle">by Delgash Gaming</div>
 
     <div class="circle-btn" onclick="alert('Jailbreak Triggered!')">
