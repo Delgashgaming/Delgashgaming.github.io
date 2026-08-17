@@ -6,7 +6,12 @@
     <title>Delgash Gaming PS4 Host</title>
     <style>
         body {
-            background-color: #0d1117;
+            /* وێنەیێ تە دێ بێتە باکگراوەند و تەواویا شاشەی گریت */
+            background-image: linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.75)), url('IMG_1426.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
@@ -16,56 +21,50 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 80vh;
+            min-height: 85vh;
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: bold;
             margin-bottom: 5px;
             letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
         .subtitle {
             color: #38bdf8;
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
-
-        /* قەبارەیێ وێنەی ل لێرە گەلەک مەزنتر بوو */
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #38bdf8;
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.7);
-            margin-bottom: 30px;
+            font-size: 15px;
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
         .circle-btn {
-            width: 200px;
-            height: 200px;
+            width: 210px;
+            height: 210px;
             border-radius: 50%;
             border: 4px solid #38bdf8;
-            box-shadow: 0 0 25px #0284c7;
+            background-color: rgba(13, 17, 23, 0.6);
+            box-shadow: 0 0 30px #0284c7;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 15px auto;
+            margin: 20px auto;
             cursor: pointer;
+            backdrop-filter: blur(4px);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .circle-btn:active {
             transform: scale(0.95);
-            box-shadow: 0 0 35px #38bdf8;
+            box-shadow: 0 0 40px #38bdf8;
         }
 
         .power-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             stroke: #38bdf8;
             stroke-width: 8;
             fill: none;
@@ -81,19 +80,22 @@
 
         .status {
             color: #38bdf8;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            margin-top: 25px;
+            margin-top: 30px;
             letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
         .checkbox-container {
-            margin-top: 15px;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
-            color: #94a3b8;
+            font-size: 15px;
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
 
         .checkbox-container input {
@@ -108,8 +110,6 @@
 
     <h1>Delgash Gaming<br>PS4 Host</h1>
     <div class="subtitle">by Delgash Gaming</div>
-
-    <img src="IMG_1426.png" alt="Delgash Gaming Logo" class="profile-img">
 
     <div class="circle-btn" onclick="alert('Jailbreak Triggered!')">
         <svg class="power-icon" viewBox="0 0 100 100">
